@@ -25,6 +25,13 @@ STEP_SIZE = 1             # Pixel step size for search (1 = most accurate)
 MIN_OVERLAP = 0.5         # Minimum overlap required between layers (0.0-1.0)
 AUTO_FIT_CANVAS = True    # Automatically fit canvas to layers after alignment
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
+
 class AutoAlignPlugin(Gimp.PlugIn):
     def do_set_i18n(self, procname):
         return False
@@ -42,13 +49,13 @@ class AutoAlignPlugin(Gimp.PlugIn):
         )
         procedure.set_image_types("*")
         procedure.set_menu_label("Auto-Align Layers")
-        procedure.add_menu_path('<Image>/Layer/Align & Distribute/')
+        procedure.add_menu_path('<Image>/Filters/')
         procedure.set_documentation(
             "Auto-align layers based on selection",
             "Automatically aligns layers based on current selection area. Uses top visible layer as template, aligns others to match.",
             name
         )
-        procedure.set_attribution("Assistant", "GPL 3", "2025")
+        procedure.set_attribution("Charon", "GPL 3", "2025")
         return procedure
 
     def get_selection_bounds(self, image):
