@@ -25,7 +25,7 @@ import math
 
 # The maximum distance (in pixels) to search for a match from the initial position.
 # A larger radius can find matches that are farther apart but will be slower.
-SEARCH_RADIUS = 50
+SEARCH_RADIUS = 100
 
 # The minimum similarity score (from 0.0 to 1.0) required to consider a match valid.
 # Lowering this may help align layers with very different lighting or content,
