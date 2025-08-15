@@ -4,6 +4,8 @@ A GIMP 3 plugin that automatically aligns a stack of layers based on a user-defi
 
 This is ideal for tasks like stacking exposures, aligning hand-drawn animation frames, or correcting drift in scanned images.
 
+**DISCLAIMER**: This was almost entirely vibe-coded with the help of Claude and Gemini. But hey, it works.
+
 ## Features
 
 -   **Selection-Based Alignment:** Uses a small, user-defined area as the reference point for high precision.
