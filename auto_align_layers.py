@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Auto-Align Layers Plugin for GIMP 3.x
-(Final Production Version with extensive comments)
 
 This plugin automatically aligns visible layers in a GIMP image based on a
 user-defined selection. It uses the top-most visible layer as the "template"
